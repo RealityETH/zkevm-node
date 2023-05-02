@@ -306,8 +306,10 @@ k     - GF_SECURITY_ADMIN_PASSWORD=zkevm
     container_name: zkevm-mock-l1-network
     image: hermeznetwork/geth-zkevm-contracts:v1.1.0-fork.4
     ports:
-      - 8545:8545
-      - 8546:8546
+      - 85452:85452
+      - 85462:85462
+    volumes:
+      - ./data/zkevm-mock-l1-networt/data:/geth_data/
     command:
       - "--http"
       - "--http.api"
