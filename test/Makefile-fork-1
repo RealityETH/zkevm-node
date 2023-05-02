@@ -1,4 +1,4 @@
-DOCKERCOMPOSE := docker-compose -f docker-compose-before-fork.yml
+DOCKERCOMPOSE := docker-compose -f docker-compose-after-fork1.yml
 DOCKERCOMPOSEAPPSEQ := zkevm-sequencer
 DOCKERCOMPOSEAPPL2GASP := zkevm-l2gaspricer
 DOCKERCOMPOSEAPPAGG := zkevm-aggregator

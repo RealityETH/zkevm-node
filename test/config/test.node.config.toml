@@ -32,7 +32,7 @@ PollMinAllowedGasPriceInterval = "15s"
 	MaxConns = 200
 
 [Etherman]
-URL = "http://zkevm-mock-l1-network:8545"
+URL = "http://zkevm-mock-l1-network:8545"// replace it with docker ip address 127....
 MultiGasProvider = false
 	[Etherscan]
 		ApiKey = ""

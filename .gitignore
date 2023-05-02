@@ -1,5 +1,7 @@
 /dist/
 /test/e2e/keystore
+/test/data
+/test/fork-scripts/node_modules
 
 /test/vectors/src/**/*md
 /test/vectors/src/**/*js

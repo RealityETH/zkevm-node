@@ -1,0 +1,14 @@
+{
+  "name": "fork-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dupliate-state.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  }
+}
