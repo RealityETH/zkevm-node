@@ -2,6 +2,7 @@ on:
   push:
     branches:
     - develop
+    - testDeploy
 
 jobs:
   build:
@@ -29,4 +30,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            hermeznetwork/zkevm-node:develop
+            josojo/zkevm-node:develop
