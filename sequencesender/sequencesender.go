@@ -177,6 +177,7 @@ func (s *SequenceSender) getSequencesToSend(ctx context.Context) ([]types.Sequen
 			BatchL2Data:    batch.BatchL2Data,
 			BatchNumber:    batch.BatchNumber,
 		}
+		log.Debugf("adding the following sequence data to be sent to L1: %v", seq)
 
 		if batch.ForcedBatchNum != nil {
 			forcedBatch, err := s.state.GetForcedBatch(ctx, *batch.ForcedBatchNum, nil)
@@ -187,6 +188,8 @@ func (s *SequenceSender) getSequencesToSend(ctx context.Context) ([]types.Sequen
 		}
 
 		sequences = append(sequences, seq)
+		log.Debugf("trying to estimate gas with the following sequences: %v", sequences)
+
 		// Check if can be send
 		tx, err = s.etherman.EstimateGasSequenceBatches(s.cfg.SenderAddress, sequences, s.cfg.L2Coinbase)
 		if err == nil && tx.Size() > s.cfg.MaxTxSizeForL1 {
